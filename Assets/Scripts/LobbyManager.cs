@@ -28,6 +28,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     {
         readyButton.onClick.AddListener(SetReady);
         cancelButton.onClick.AddListener(SetNotReady);
+        PhotonNetwork.AutomaticallySyncScene = true;
 
         if (PhotonNetwork.InRoom) UpdateLobbyUI();
     }

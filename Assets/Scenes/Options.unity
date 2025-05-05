@@ -795,11 +795,15 @@ MonoBehaviour:
   characterName: {fileID: 1404321651}
   characterImage: {fileID: 1498219457}
   charactersSprites:
-  - {fileID: -6623492659709483746, guid: 5234d381c96c11e4dae8cec1901c09e7, type: 3}
-  - {fileID: -3766519690804746565, guid: 6c9e7c07669cd264fbfcabe294205b63, type: 3}
+  - {fileID: 4500800555511498748, guid: a9f1a6dad7d75bf4ea4369075a38af6f, type: 3}
+  - {fileID: 1626027408050017599, guid: fd0d357c9748899449088f5df35d0c90, type: 3}
+  - {fileID: 791010466718984143, guid: b979390ca1bdfa34a9bc67c0d7f5f651, type: 3}
+  - {fileID: -3295834007632854175, guid: 89c8a1a7995edfb4e92df7bafae18dbb, type: 3}
   characterNames:
-  - Globo Terrestre
-  - "P\xE1"
+  - Advogado
+  - "Agr\xF4nomo"
+  - "Bi\xF3loga"
+  - Engenheiro
 --- !u!114 &720995907
 MonoBehaviour:
   m_ObjectHideFlags: 0
