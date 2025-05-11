@@ -6,7 +6,8 @@ public class MeleeHitbox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Acertei o inimigo");
+        if (!collision.CompareTag("Enemy")) return;
+
         if (collision.TryGetComponent<Enemy>(out var enemy)) enemy.TakeDamage(damage);
     }
 }

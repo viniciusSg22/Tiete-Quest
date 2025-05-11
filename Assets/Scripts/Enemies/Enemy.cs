@@ -1,18 +1,28 @@
 using UnityEngine;
 using System.Collections;
+using Photon.Pun;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviourPun
 {
+    [Header("Movimento")]
     public float moveSpeed = 2f;
     public float chaseSpeed = 3f;
     public float attackRange = 1.5f;
     public float jumpForce = 5f;
 
+    [Header("Detecção")]
     public float detectionRadius = 8f;
     public LayerMask groundLayer;
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
+    public Transform wallCheck;
+    public float wallCheckDistance = 0.5f;
+    public Transform groundAheadCheck;
 
+    [Header("Estado")]
+    public bool patrolEnabled = true;
+
+    [Header("Vida")]
     public int maxHealth = 3;
     private int currentHealth;
 
@@ -20,19 +30,27 @@ public class Enemy : MonoBehaviour
     private Transform targetPlayer;
     private bool isGrounded;
     private bool isAttacking;
+    private bool isFacingRight = true;
 
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
-        StartCoroutine(UpdateTargetRoutine());
+
+        if (PhotonNetwork.IsMasterClient) StartCoroutine(UpdateTargetRoutine());
     }
 
-    void Update()
+    private void Update()
     {
+        if (!PhotonNetwork.IsMasterClient) return;
+
         CheckGround();
 
-        if (targetPlayer == null) return;
+        if (targetPlayer == null)
+        {
+            Patrol();
+            return;
+        }
 
         float distanceToPlayer = Vector2.Distance(transform.position, targetPlayer.position);
 
@@ -49,19 +67,33 @@ public class Enemy : MonoBehaviour
         HandleJump();
     }
 
-    void CheckGround()
+    private void CheckGround()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 1.1f, groundLayer);
-        isGrounded = hit.collider != null;
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
     }
 
-    void ChasePlayer()
+    private void Patrol()
     {
-        Vector2 dir = (targetPlayer.position - transform.position).normalized;
-        rb.linearVelocity = new Vector2(dir.x * chaseSpeed, rb.linearVelocity.y);
+        if (!patrolEnabled) return;
+
+        float dir = isFacingRight ? 1f : -1f;
+        rb.linearVelocity = new Vector2(dir * moveSpeed, rb.linearVelocity.y);
+
+        if (IsHittingWall() || !HasGroundAhead())
+            Flip();
     }
 
-    void HandleJump()
+    private void ChasePlayer()
+    {
+        Vector2 direction = (targetPlayer.position - transform.position).normalized;
+
+        if (direction.x > 0 && !isFacingRight) Flip();
+        else if (direction.x < 0 && isFacingRight) Flip();
+
+        rb.linearVelocity = new Vector2(direction.x * chaseSpeed, rb.linearVelocity.y);
+    }
+
+    private void HandleJump()
     {
         if (!isGrounded) return;
 
@@ -73,7 +105,28 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    IEnumerator Attack()
+    private bool IsHittingWall()
+    {
+        Vector2 direction = isFacingRight ? Vector2.right : Vector2.left;
+        RaycastHit2D hit = Physics2D.Raycast(wallCheck.position, direction, wallCheckDistance, groundLayer);
+        return hit.collider != null;
+    }
+
+    private bool HasGroundAhead()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(groundAheadCheck.position, Vector2.down, 1f, groundLayer);
+        return hit.collider != null;
+    }
+
+    private void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
+    }
+
+    private IEnumerator Attack()
     {
         isAttacking = true;
         rb.linearVelocity = Vector2.zero;
@@ -84,22 +137,18 @@ public class Enemy : MonoBehaviour
         isAttacking = false;
     }
 
+    [PunRPC]
     public void TakeDamage(int damage)
     {
+        if (!PhotonNetwork.IsMasterClient) return;
+
         currentHealth -= damage;
 
         if (currentHealth <= 0)
-        {
-            Die();
-        }
+            PhotonNetwork.Destroy(gameObject);
     }
 
-    void Die()
-    {
-        Destroy(gameObject);
-    }
-
-    IEnumerator UpdateTargetRoutine()
+    private IEnumerator UpdateTargetRoutine()
     {
         while (true)
         {
@@ -118,12 +167,24 @@ public class Enemy : MonoBehaviour
                 }
             }
 
-            if (closest != null)
-            {
-                targetPlayer = closest.transform;
-            }
+            targetPlayer = closest != null ? closest.transform : null;
 
             yield return new WaitForSeconds(0.5f);
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (wallCheck != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(wallCheck.position, wallCheck.position + (isFacingRight ? Vector3.right : Vector3.left) * wallCheckDistance);
+        }
+
+        if (groundAheadCheck != null)
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawLine(groundAheadCheck.position, groundAheadCheck.position + Vector3.down * 1f);
         }
     }
 }

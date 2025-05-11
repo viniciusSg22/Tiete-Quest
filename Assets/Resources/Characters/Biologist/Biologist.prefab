@@ -45,7 +45,9 @@ GameObject:
   - component: {fileID: 3787609228115587370}
   - component: {fileID: 2123807552495840851}
   - component: {fileID: 3175810880131333295}
+  - component: {fileID: 5214846332257178735}
   - component: {fileID: 1089814923290183584}
+  - component: {fileID: 4517428853955888890}
   m_Layer: 0
   m_Name: Biologist
   m_TagString: Player
@@ -63,7 +65,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.71, y: -2.61, z: 0}
-  m_LocalScale: {x: 0.35, y: 0.35, z: 1}
+  m_LocalScale: {x: 0.45, y: 0.45, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9090766622392967409}
@@ -141,7 +143,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -149,7 +151,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -212,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpForce: 10
+  jumpForce: 20
   groundCheck: {fileID: 9090766622392967409}
   groundCheckRadius: 0.2
   groundLayer:
@@ -231,11 +233,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meleeHitbox: {fileID: 6284932251022179590}
+  meleeDuration: 0.2
+  meleeCooldown: 0.5
   projectilePrefab: {fileID: 4330061986143733920, guid: 2f2a8b350df95474ab30b8339a7ce162,
     type: 3}
   firePoint: {fileID: 8750362051170140119}
   projectileSpeed: 10
-  meleeDuration: 0.2
+  rangedCooldown: 0.5
+--- !u!114 &5214846332257178735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3790223318183397643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680cb0d9afb128543bb0330300172860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1089814923290183584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,6 +401,28 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &4517428853955888890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3790223318183397643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &6284932251022179590
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +434,7 @@ GameObject:
   - component: {fileID: 7648171116069979334}
   - component: {fileID: 3021518649326462341}
   - component: {fileID: 1989843846980733166}
+  - component: {fileID: 4948467062704089374}
   m_Layer: 0
   m_Name: MeleeHitbox
   m_TagString: Untagged
@@ -504,7 +543,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -531,6 +570,19 @@ PolygonCollider2D:
       - {x: 0.19599998, y: -0.10799999}
       - {x: 0.07599999, y: 0.032000005}
   m_UseDelaunayMesh: 0
+--- !u!114 &4948467062704089374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6284932251022179590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7989582e709684cbc3188f18f5f5ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 3
 --- !u!1 &8413504669283838139
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,7 +608,7 @@ Transform:
   m_GameObject: {fileID: 8413504669283838139}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.79, y: -0.32, z: 0}
+  m_LocalPosition: {x: 1.79, y: 0.141, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

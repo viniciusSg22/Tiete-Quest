@@ -14,7 +14,9 @@ GameObject:
   - component: {fileID: 6071437145845725916}
   - component: {fileID: 4566386705674991022}
   - component: {fileID: 1990169751956872952}
+  - component: {fileID: 2922835031821234494}
   - component: {fileID: 1405413287678705579}
+  - component: {fileID: 8285495636305655408}
   m_Layer: 0
   m_Name: Agronomist
   m_TagString: Player
@@ -111,7 +113,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -119,7 +121,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -181,8 +183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 647107dad9680204586eb1ca1894551c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  jumpForce: 8
+  moveSpeed: 5
+  jumpForce: 20
   groundCheck: {fileID: 1203013322996059428}
   groundCheckRadius: 0.2
   groundLayer:
@@ -201,11 +203,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meleeHitbox: {fileID: 4687438944022121326}
+  meleeDuration: 0.2
+  meleeCooldown: 0.5
   projectilePrefab: {fileID: 1295293394886034558, guid: b827ccb9e2b46a34999a56f7dc4c805f,
     type: 3}
   firePoint: {fileID: 7664143298733767247}
   projectileSpeed: 10
-  meleeDuration: 0.2
+  rangedCooldown: 0.5
+--- !u!114 &2922835031821234494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321683921991469666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680cb0d9afb128543bb0330300172860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1405413287678705579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,6 +371,28 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &8285495636305655408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321683921991469666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &2645017277415164108
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,7 +418,7 @@ Transform:
   m_GameObject: {fileID: 2645017277415164108}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.79, y: 0, z: 0}
+  m_LocalPosition: {x: 1.757, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -428,6 +466,7 @@ GameObject:
   - component: {fileID: 8348056116318188732}
   - component: {fileID: 8794989300385492543}
   - component: {fileID: 2137896300376558470}
+  - component: {fileID: 7080748016828396140}
   m_Layer: 0
   m_Name: MeleeHitbox
   m_TagString: Untagged
@@ -536,7 +575,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -603,3 +642,16 @@ PolygonCollider2D:
       - {x: 0.054541692, y: 0.04831822}
       - {x: 0.051913027, y: 0.062163107}
   m_UseDelaunayMesh: 0
+--- !u!114 &7080748016828396140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4687438944022121326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7989582e709684cbc3188f18f5f5ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 3

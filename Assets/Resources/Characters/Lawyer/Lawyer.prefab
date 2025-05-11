@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5410699779718082846}
   - component: {fileID: 2728986095746996462}
   - component: {fileID: 5747847611733382548}
+  - component: {fileID: 7345149264346169285}
   m_Layer: 0
   m_Name: MeleeHitbox
   m_TagString: Untagged
@@ -142,6 +143,19 @@ PolygonCollider2D:
       - {x: 0.14999999, y: -0.022999993}
       - {x: 0.12, y: 0.027000006}
   m_UseDelaunayMesh: 0
+--- !u!114 &7345149264346169285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3016024775977413379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7989582e709684cbc3188f18f5f5ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 3
 --- !u!1 &5729103853016269103
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +201,9 @@ GameObject:
   - component: {fileID: 5281537673835556058}
   - component: {fileID: 193056815996832926}
   - component: {fileID: 3277792331335327435}
+  - component: {fileID: 9164995841777758585}
   - component: {fileID: 2989451900861760103}
+  - component: {fileID: 1132979372825006083}
   m_Layer: 0
   m_Name: Lawyer
   m_TagString: Player
@@ -284,7 +300,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -292,7 +308,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -355,7 +371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpForce: 10
+  jumpForce: 20
   groundCheck: {fileID: 2031504985987799710}
   groundCheckRadius: 0.2
   groundLayer:
@@ -374,11 +390,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meleeHitbox: {fileID: 3016024775977413379}
+  meleeDuration: 0.2
+  meleeCooldown: 0.5
   projectilePrefab: {fileID: 8961475243484194138, guid: 32bf7001bd85c654f904571d9dc2b46a,
     type: 3}
   firePoint: {fileID: 4923801340213897360}
   projectileSpeed: 10
-  meleeDuration: 0.2
+  rangedCooldown: 0.5
+--- !u!114 &9164995841777758585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6698717245452529527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680cb0d9afb128543bb0330300172860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2989451900861760103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,6 +558,28 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1132979372825006083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6698717245452529527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &8806032900736975439
 GameObject:
   m_ObjectHideFlags: 0

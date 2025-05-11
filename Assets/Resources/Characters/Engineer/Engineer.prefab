@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 5646311225699175092}
   - component: {fileID: 6543276901406931897}
   - component: {fileID: 2051946993056129018}
+  - component: {fileID: 7455054497136194831}
   m_Layer: 0
   m_Name: MeleeHitbox
   m_TagString: Untagged
@@ -150,7 +151,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -181,6 +182,19 @@ PolygonCollider2D:
       - {x: 0.13921039, y: 0.25175458}
       - {x: 0.13536853, y: 0.18879348}
   m_UseDelaunayMesh: 0
+--- !u!114 &7455054497136194831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2427750201893505188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7989582e709684cbc3188f18f5f5ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 3
 --- !u!1 &3593454870328023096
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,7 +240,9 @@ GameObject:
   - component: {fileID: 7125154873345804890}
   - component: {fileID: 581205275916017396}
   - component: {fileID: 1410786137785135094}
+  - component: {fileID: 7868180659772840795}
   - component: {fileID: 791679519144401601}
+  - component: {fileID: -7803004152404305642}
   m_Layer: 0
   m_Name: Engineer
   m_TagString: Player
@@ -323,7 +339,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -331,7 +347,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -394,7 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpForce: 10
+  jumpForce: 20
   groundCheck: {fileID: 629578820005605021}
   groundCheckRadius: 0.2
   groundLayer:
@@ -413,11 +429,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meleeHitbox: {fileID: 2427750201893505188}
+  meleeDuration: 0.2
+  meleeCooldown: 0.5
   projectilePrefab: {fileID: 1578850280399067122, guid: 73a0fd006521beb4f93800c15c255c6b,
     type: 3}
   firePoint: {fileID: 5888695043027003507}
   projectileSpeed: 10
-  meleeDuration: 0.2
+  rangedCooldown: 0.5
+--- !u!114 &7868180659772840795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4376722147838099896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680cb0d9afb128543bb0330300172860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &791679519144401601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,3 +597,25 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &-7803004152404305642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4376722147838099896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0

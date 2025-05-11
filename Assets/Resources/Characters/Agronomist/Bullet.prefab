@@ -168,3 +168,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 2
   damage: 1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64

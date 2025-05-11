@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level4.unity
     guid: f3da6ff8fb2ae8945a428330b1ea5a34
+  - enabled: 1
+    path: Assets/Scenes/Sandbox.unity
+    guid: 9626e18363f162e4e872c8c6f23170a2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: afc8e0510e5f12b4aafa1faa08655dad,
       type: 3}
