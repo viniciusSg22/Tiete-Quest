@@ -16,7 +16,7 @@ public class EnemySpawner : MonoBehaviourPunCallbacks
     {
         if (!PhotonNetwork.IsMasterClient) return;
 
-        if (!isSpawning && spawnedEnemies < maxEnemies) StartCoroutine(SpawnEnemy());
+        if (!isSpawning && spawnedEnemies < maxEnemies)StartCoroutine(SpawnEnemy());
     }
 
     IEnumerator SpawnEnemy()
@@ -28,7 +28,9 @@ public class EnemySpawner : MonoBehaviourPunCallbacks
             if (spawnedEnemies >= maxEnemies) break;
 
             string randomEnemyName = enemyPrefabNames[Random.Range(0, enemyPrefabNames.Length)];
-            _ = PhotonNetwork.Instantiate("Enemies/" + randomEnemyName, point.position, Quaternion.identity);
+
+            PhotonNetwork.Instantiate("Enemies/" + randomEnemyName, point.position, Quaternion.identity);
+
             spawnedEnemies++;
             yield return new WaitForSeconds(spawnDelay);
         }

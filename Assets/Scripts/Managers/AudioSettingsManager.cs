@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class AudioSettingsManager : MonoBehaviour
 {
     public Slider musicSlider, sfxSlider;
+    
     private void Start()
     {
         musicSlider.value = PlayerPrefs.GetFloat("musicVolume", 50f);

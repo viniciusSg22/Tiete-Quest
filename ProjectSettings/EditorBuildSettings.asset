@@ -17,16 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lobby.unity
     guid: 15f1d849be673744aab5c72a432ee30e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level1.unity
     guid: 7de033ccc1ff3504ca755dc4e905d571
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level2.unity
     guid: 14f4d4ebd287c014fbc27eac7cafafcb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level3.unity
     guid: 2b425c9fb13b55f438a26f578a15f9a0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level4.unity
     guid: f3da6ff8fb2ae8945a428330b1ea5a34
   - enabled: 1

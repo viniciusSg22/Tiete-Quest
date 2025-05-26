@@ -1,7 +1,9 @@
+using Photon.Pun;
+using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviourPun
 {
     [Header("Moviment")]
     public float moveSpeed = 5f;
@@ -17,26 +19,40 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping = false;
     private bool facingRight = true;
 
+    [SerializeField]
+    private GameObject OnScreenControls;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        PhotonNetwork.SendRate = 60;
+        PhotonNetwork.SerializationRate = 5;
+
+        if (photonView.IsMine) Instantiate(OnScreenControls);
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
+        if (!photonView.IsMine) return;
         moveInput = context.ReadValue<Vector2>();
     }
 
     public void OnJump(InputAction.CallbackContext context)
     {
+        if (!photonView.IsMine) return;
         if (context.performed && IsGrounded()) isJumping = true;
     }
 
     void Update()
     {
+        if (!photonView.IsMine) return;
+
         if (isJumping)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+
+            AudioManager.Instance.PlaySound(AudioManager.ESoundType.Jump);
+
             isJumping = false;
         }
 

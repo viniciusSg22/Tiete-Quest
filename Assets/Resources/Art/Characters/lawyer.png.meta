@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      lawyer_0: 4500800555511498748
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

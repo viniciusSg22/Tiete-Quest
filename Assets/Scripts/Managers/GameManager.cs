@@ -31,15 +31,6 @@ public class GameManager : MonoBehaviourPunCallbacks
                 break;
         }
 
-        GameObject characterPrefab = Resources.Load<GameObject>($"Characters/{characterName}/{characterName}");
-
-        if (characterPrefab == null)
-        {
-            characterPrefab = Resources.Load<GameObject>($"Characters/Biologist/Biologist");
-            // Debug.LogError("Personagem não encontrado em Resources/Characters/" + characterName);
-            // return;
-        }
-
         int index = System.Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer);
         Transform spawnPoint = spawnPoints[index % spawnPoints.Length];
 
@@ -51,18 +42,7 @@ public class GameManager : MonoBehaviourPunCallbacks
         if (view != null && view.IsMine)
         {
             CameraFollow cameraFollow = FindFirstObjectByType<CameraFollow>();
-            if (cameraFollow != null)
-            {
-                cameraFollow.target = playerInstance.transform;
-            }
-            else
-            {
-                Debug.LogWarning("CameraFollow não encontrado na cena!");
-            }
-        }
-        else
-        {
-            Debug.Log("Não foi possivel instanciar o jogador no photon!");
+            if (cameraFollow != null) cameraFollow.target = playerInstance.transform;
         }
     }
 }
