@@ -4,7 +4,7 @@ using WebSocketSharp;
 
 public class GameManager : MonoBehaviourPunCallbacks
 {
-    public Transform[] spawnPoints;
+    public Transform SpawnPoint;
 
     private void Start()
     {
@@ -31,11 +31,8 @@ public class GameManager : MonoBehaviourPunCallbacks
                 break;
         }
 
-        int index = System.Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer);
-        Transform spawnPoint = spawnPoints[index % spawnPoints.Length];
-
         if (characterName.IsNullOrEmpty()) characterName = "Biologist";
-        GameObject playerInstance = PhotonNetwork.Instantiate($"Characters/{characterName}/{characterName}", spawnPoint.position, spawnPoint.rotation);
+        GameObject playerInstance = PhotonNetwork.Instantiate($"Characters/{characterName}/{characterName}", SpawnPoint.position, SpawnPoint.rotation);
 
         PhotonView view = playerInstance.GetComponent<PhotonView>();
 

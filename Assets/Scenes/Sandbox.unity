@@ -558,7 +558,7 @@ GameObject:
   - component: {fileID: 1140316418}
   m_Layer: 0
   m_Name: SpawnPoint
-  m_TagString: Untagged
+  m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5297,10 +5297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89da8ecda171a3c4db39c84b1cd37c1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoints:
-  - {fileID: 1140316419}
-  OnScreenControls: {fileID: 6227832647777922431, guid: 32632269d1175e0468847bcb1c048213,
-    type: 3}
+  SpawnPoint: {fileID: 1140316419}
 --- !u!1 &1807706453
 GameObject:
   m_ObjectHideFlags: 0
