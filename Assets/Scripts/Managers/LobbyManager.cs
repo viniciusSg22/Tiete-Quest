@@ -132,7 +132,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsMasterClient && AllPlayersReady())
         {
             PhotonNetwork.CurrentRoom.IsOpen = false;
-            PhotonNetwork.LoadLevel("Sandbox");
+            PhotonNetwork.LoadLevel("Level1");
         }
         else
         {

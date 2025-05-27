@@ -10,6 +10,7 @@ TagManager:
   - EnemyBody
   - OnScreenControls
   - SpawnPoint
+  - ExitPortal
   layers:
   - Default
   - TransparentFX

@@ -46,6 +46,9 @@ MonoBehaviour:
   - TakeDamageRPC
   - RequestDamageEnemy
   - HandleDamage
+  - ActivatePortalRPC
+  - LoadNextLevelRPC
+  - PlayerReadyRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
