@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4389ac9d397b24748bfe28bddd779158
+guid: 6c9e7c07669cd264fbfcabe294205b63
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4428912374758282309
-    second: microscope_0
+      213: -3766519690804746565
+    second: shovel_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,27 +96,40 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: microscope_0
+      name: shovel
       rect:
         serializedVersion: 2
-        x: 2
+        x: 8
         y: 0
-        width: 28
+        width: 16
         height: 32
       alignment: 9
-      pivot: {x: 0.3, y: 0.9}
+      pivot: {x: 0.5, y: 0.8}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bbb633919a75982c0800000000000000
-      internalID: -4428912374758282309
+      spriteID: bb6a11e0c42aabbc0800000000000000
+      internalID: -3766519690804746565
       vertices: []
       indices: 
       edges: []
@@ -125,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c8c0c1f9fc00ed24781c102e52e303c6
+    spriteID: abfa41ea4ef6f304f9fac91edea61b35
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      microscope_0: -4428912374758282309
+      shovel: -3766519690804746565
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

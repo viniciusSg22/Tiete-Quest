@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5234d381c96c11e4dae8cec1901c09e7
+guid: 4389ac9d397b24748bfe28bddd779158
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6623492659709483746
-    second: earth_globe_0
+      213: -4428912374758282309
+    second: microscope_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,27 +96,40 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: earth_globe_0
+      name: microscope_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 32
+        width: 28
         height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.9}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e15eb9dc480a414a0800000000000000
-      internalID: -6623492659709483746
+      spriteID: bbb633919a75982c0800000000000000
+      internalID: -4428912374758282309
       vertices: []
       indices: 
       edges: []
@@ -125,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c8c0c1f9fc00ed24781c102e52e303c6
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      earth_globe_0: -6623492659709483746
+      microscope_0: -4428912374758282309
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
