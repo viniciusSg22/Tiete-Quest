@@ -29,7 +29,6 @@ public class Enemy : MonoBehaviourPun
     private Rigidbody2D rb;
     private Transform targetPlayer;
     private bool isGrounded;
-    private bool isAttacking;
     private bool isFacingRight = true;
 
     private void Start()
@@ -54,15 +53,7 @@ public class Enemy : MonoBehaviourPun
 
         float distanceToPlayer = Vector2.Distance(transform.position, targetPlayer.position);
 
-        if (distanceToPlayer <= attackRange)
-        {
-            if (!isAttacking)
-                StartCoroutine(Attack());
-        }
-        else
-        {
-            ChasePlayer();
-        }
+        if (distanceToPlayer >= attackRange) ChasePlayer();
 
         HandleJump();
     }
@@ -79,8 +70,7 @@ public class Enemy : MonoBehaviourPun
         float dir = isFacingRight ? 1f : -1f;
         rb.linearVelocity = new Vector2(dir * moveSpeed, rb.linearVelocity.y);
 
-        if (IsHittingWall() || !HasGroundAhead())
-            Flip();
+        if (IsHittingWall() || !HasGroundAhead()) Flip();
     }
 
     private void ChasePlayer()
@@ -99,10 +89,7 @@ public class Enemy : MonoBehaviourPun
 
         float verticalDiff = targetPlayer.position.y - transform.position.y;
 
-        if (verticalDiff > 1f)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-        }
+        if (verticalDiff > 1f) rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
     }
 
     private bool IsHittingWall()
@@ -124,17 +111,6 @@ public class Enemy : MonoBehaviourPun
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
-    }
-
-    private IEnumerator Attack()
-    {
-        isAttacking = true;
-        rb.linearVelocity = Vector2.zero;
-
-        Debug.Log("Inimigo atacando!");
-
-        yield return new WaitForSeconds(1f);
-        isAttacking = false;
     }
 
     [PunRPC]
@@ -173,21 +149,6 @@ public class Enemy : MonoBehaviourPun
             targetPlayer = closest != null ? closest.transform : null;
 
             yield return new WaitForSeconds(0.5f);
-        }
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        if (wallCheck != null)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawLine(wallCheck.position, wallCheck.position + (isFacingRight ? Vector3.right : Vector3.left) * wallCheckDistance);
-        }
-
-        if (groundAheadCheck != null)
-        {
-            Gizmos.color = Color.blue;
-            Gizmos.DrawLine(groundAheadCheck.position, groundAheadCheck.position + Vector3.down * 1f);
         }
     }
 }

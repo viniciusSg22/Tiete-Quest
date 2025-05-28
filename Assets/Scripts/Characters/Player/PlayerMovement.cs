@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviourPun
 
     [SerializeField]
     private GameObject OnScreenControls;
+    
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
