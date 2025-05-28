@@ -30,6 +30,7 @@ public class EnemySpawner : MonoBehaviourPunCallbacks
             string randomEnemyName = enemyPrefabNames[Random.Range(0, enemyPrefabNames.Length)];
 
             PhotonNetwork.Instantiate("Enemies/" + randomEnemyName, point.position, Quaternion.identity);
+            EnemyManager.Instance.RegisterEnemy();
 
             spawnedEnemies++;
             yield return new WaitForSeconds(spawnDelay);

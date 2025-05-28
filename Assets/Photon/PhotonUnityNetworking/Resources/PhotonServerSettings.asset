@@ -49,6 +49,7 @@ MonoBehaviour:
   - ActivatePortalRPC
   - LoadNextLevelRPC
   - PlayerReadyRPC
+  - RequestSceneChange
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

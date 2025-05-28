@@ -145,7 +145,10 @@ public class Enemy : MonoBehaviourPun
         currentHealth -= damage;
 
         if (currentHealth <= 0)
+        {
+            EnemyManager.Instance.UnregisterEnemy();
             PhotonNetwork.Destroy(gameObject);
+        }
     }
 
     private IEnumerator UpdateTargetRoutine()

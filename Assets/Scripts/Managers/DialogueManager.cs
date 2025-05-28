@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -13,6 +15,11 @@ public class DialogueManager : MonoBehaviour
     private bool isDialogueActive = false;
 
     public float timePerMessage = 2f;
+    public float typingSpeed = 0.05f;
+
+    private Coroutine typingCoroutine;
+    public Image characterImage;
+
 
     private void Awake()
     {
@@ -51,10 +58,22 @@ public class DialogueManager : MonoBehaviour
         }
 
         string nextMessage = dialogueQueue.Dequeue();
-        messageText.text = nextMessage;
 
-        CancelInvoke(nameof(ShowNextMessage));
-        Invoke(nameof(ShowNextMessage), timePerMessage);
+        if (typingCoroutine != null) StopCoroutine(typingCoroutine);
+        typingCoroutine = StartCoroutine(TypeText(nextMessage));
+    }
+
+    private IEnumerator TypeText(string message)
+    {
+        messageText.text = "";
+        foreach (char letter in message.ToCharArray())
+        {
+            messageText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+
+        yield return new WaitForSeconds(timePerMessage);
+        ShowNextMessage();
     }
 
     private void EndDialogue()
