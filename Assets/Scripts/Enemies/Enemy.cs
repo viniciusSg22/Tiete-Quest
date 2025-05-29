@@ -120,6 +120,8 @@ public class Enemy : MonoBehaviourPun
 
         currentHealth -= damage;
 
+        ScoreManager.Instance.AddScoreFromEnemyDamage(damage);
+
         if (currentHealth <= 0)
         {
             EnemyManager.Instance.UnregisterEnemy();

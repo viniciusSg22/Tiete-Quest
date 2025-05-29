@@ -131,8 +131,10 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.IsMasterClient && AllPlayersReady())
         {
+            if (PhotonNetwork.IsMasterClient) PhotonNetwork.InstantiateRoomObject("Network/ScoreManager", Vector3.zero, Quaternion.identity);
+
             PhotonNetwork.CurrentRoom.IsOpen = false;
-            PhotonNetwork.LoadLevel("Level1");
+            PhotonNetwork.LoadLevel("Cutscene");
         }
         else
         {

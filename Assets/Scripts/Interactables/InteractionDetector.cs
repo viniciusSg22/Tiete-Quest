@@ -13,7 +13,7 @@ public class InteractionDetector : MonoBehaviour
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        if (context.performed) interactableInRange.Interact();
+        if (context.performed && interactableInRange != null) interactableInRange.Interact();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

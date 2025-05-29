@@ -159,8 +159,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4998979503678330216, guid: 00786425d482177458583c7482fb6ef3,
-    type: 3}
+  m_Sprite: {fileID: 4998979503678330216, guid: 00786425d482177458583c7482fb6ef3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -290,8 +289,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4500800555511498748, guid: a9f1a6dad7d75bf4ea4369075a38af6f,
-    type: 3}
+  m_Sprite: {fileID: 4500800555511498748, guid: a9f1a6dad7d75bf4ea4369075a38af6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -388,14 +386,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpForce: 20
+  jumpForce: 25
   groundCheck: {fileID: 2031504985987799710}
   groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  OnScreenControls: {fileID: 6227832647777922431, guid: 32632269d1175e0468847bcb1c048213,
-    type: 3}
+  OnScreenControls: {fileID: 6227832647777922431, guid: 32632269d1175e0468847bcb1c048213, type: 3}
 --- !u!114 &3277792331335327435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,8 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9ba843eea1a54aaf324aa69fce1de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 8961475243484194138, guid: 32bf7001bd85c654f904571d9dc2b46a,
-    type: 3}
+  projectilePrefab: {fileID: 8961475243484194138, guid: 32bf7001bd85c654f904571d9dc2b46a, type: 3}
   firePoint: {fileID: 4923801340213897360}
   projectileSpeed: 10
   rangedCooldown: 0.5
@@ -437,8 +433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: d931a3fc5d64d9d4384f6a858e43d3d6,
-    type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: d931a3fc5d64d9d4384f6a858e43d3d6, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:

@@ -16,7 +16,12 @@ public class EnemySpawner : MonoBehaviourPunCallbacks
     {
         if (!PhotonNetwork.IsMasterClient) return;
 
-        if (!isSpawning && spawnedEnemies < maxEnemies)StartCoroutine(SpawnEnemy());
+        if (!isSpawning && spawnedEnemies < maxEnemies) StartCoroutine(SpawnEnemy());
+    }
+
+    void Start()
+    {
+        if (EnemyManager.Instance != null) EnemyManager.Instance.maxEnemies = maxEnemies;
     }
 
     IEnumerator SpawnEnemy()
