@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
@@ -25,6 +26,6 @@ public class EnemyManager : MonoBehaviour
 
         if (EnemyUI.Instance != null) EnemyUI.Instance.IncrementKill();
 
-        if (totalEnemiesAlive <= 0) exitPortal.SetActive(true);
+        if (totalEnemiesAlive <= 0 || EnemyUI.Instance.currentKills >= Math.Round(maxEnemies / 4.0)) exitPortal.SetActive(true);
     }
 }

@@ -88,8 +88,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1626027408050017599, guid: fd0d357c9748899449088f5df35d0c90,
-    type: 3}
+  m_Sprite: {fileID: 1626027408050017599, guid: fd0d357c9748899449088f5df35d0c90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -192,8 +191,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  OnScreenControls: {fileID: 6227832647777922431, guid: 32632269d1175e0468847bcb1c048213,
-    type: 3}
+  OnScreenControls: {fileID: 6227832647777922431, guid: 32632269d1175e0468847bcb1c048213, type: 3}
 --- !u!114 &1990169751956872952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,8 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a9ba843eea1a54aaf324aa69fce1de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 1295293394886034558, guid: b827ccb9e2b46a34999a56f7dc4c805f,
-    type: 3}
+  projectilePrefab: {fileID: 1295293394886034558, guid: b827ccb9e2b46a34999a56f7dc4c805f, type: 3}
   firePoint: {fileID: 7664143298733767247}
   projectileSpeed: 10
   rangedCooldown: 0.5
@@ -235,8 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: d931a3fc5d64d9d4384f6a858e43d3d6,
-    type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: d931a3fc5d64d9d4384f6a858e43d3d6, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -665,13 +661,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4998979503678330216, guid: 00786425d482177458583c7482fb6ef3,
-    type: 3}
+  m_Sprite: {fileID: 523833030, guid: c53253dba96186b4490d629bdb307a0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

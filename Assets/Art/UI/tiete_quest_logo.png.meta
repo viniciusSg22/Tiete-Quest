@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4389ac9d397b24748bfe28bddd779158
+guid: 92c0bbbceb3b38644986786d97d332c7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4428912374758282309
-    second: microscope_0
+      213: 5216897621536323224
+    second: tiete_quest_logo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: microscope_0
+      name: tiete_quest_logo_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 28
-        height: 32
-      alignment: 9
-      pivot: {x: 0.3, y: 0.9}
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bbb633919a75982c0800000000000000
-      internalID: -4428912374758282309
+      spriteID: 896b0491fb4266840800000000000000
+      internalID: 5216897621536323224
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c8c0c1f9fc00ed24781c102e52e303c6
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      microscope_0: -4428912374758282309
+      tiete_quest_logo_0: 5216897621536323224
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 03712515a25fd0a47aebad72f87c2ab7
+guid: d995025ea7c8bfb49a5ea938ac0f065a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7675055939041023466
-    second: suitcase_0
+      213: 10526933440546149
+    second: non_pressable_elements_0
+  - first:
+      213: 3649308821385081469
+    second: non_pressable_elements_1
+  - first:
+      213: -7366253894855936657
+    second: non_pressable_elements_2
+  - first:
+      213: 2005869328202311558
+    second: non_pressable_elements_3
+  - first:
+      213: 8910844699470998007
+    second: non_pressable_elements_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +125,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: suitcase_0
+      name: ready_status
       rect:
         serializedVersion: 2
-        x: 1
-        y: 3
-        width: 30
-        height: 27
-      alignment: 9
-      pivot: {x: 0.5, y: 0.9}
+        x: 0
+        y: 32
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 61a2532a949bc7590800000000000000
-      internalID: -7675055939041023466
+      spriteID: 5654c40b036652000800000000000000
+      internalID: 10526933440546149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: not_ready_status
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d727b56c903f4a230800000000000000
+      internalID: 3649308821385081469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scoreboard_trophy
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6536c75c1fc5c990800000000000000
+      internalID: -7366253894855936657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kill_counter_skull
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 687a955c68746db10800000000000000
+      internalID: 2005869328202311558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dialogue_box
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f924a0ea0ea9ab70800000000000000
+      internalID: 8910844699470998007
       vertices: []
       indices: 
       edges: []
@@ -138,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: caf1dc39213b7904f8518a31cd18394f
+    spriteID: 0776de44e6d623c46a79ed3ef62311ee
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +248,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      suitcase_0: -7675055939041023466
+      dialogue_box: 8910844699470998007
+      kill_counter_skull: 2005869328202311558
+      non_pressable_elements_5: 771661728
+      not_ready_status: 3649308821385081469
+      ready_status: 10526933440546149
+      scoreboard_trophy: -7366253894855936657
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -8,7 +8,7 @@ public class EnemyUI : MonoBehaviour
     public TextMeshProUGUI killCounterText;
     public int maxEnemies;
 
-    private int currentKills = 0;
+    public int currentKills = 0;
 
     void Awake()
     {

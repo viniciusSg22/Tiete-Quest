@@ -179,8 +179,7 @@ MonoBehaviour:
   m_text: "TIET\xCA QUEST"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1e994977596767e48a442b83c984779e, type: 2}
-  m_sharedMaterial: {fileID: 374663568645855011, guid: 1e994977596767e48a442b83c984779e,
-    type: 2}
+  m_sharedMaterial: {fileID: 374663568645855011, guid: 1e994977596767e48a442b83c984779e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -357,15 +356,14 @@ MonoBehaviour:
     mudan\xE7a"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1e994977596767e48a442b83c984779e, type: 2}
-  m_sharedMaterial: {fileID: 374663568645855011, guid: 1e994977596767e48a442b83c984779e,
-    type: 2}
+  m_sharedMaterial: {fileID: 374663568645855011, guid: 1e994977596767e48a442b83c984779e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278741990
-  m_fontColor: {r: 0.90196085, g: 0.41960788, b: 0.03137255, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -550,8 +548,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: -2872640823634086922, guid: ee95cf1966bf1044c80895487d75f88e,
-    type: 3}
+  m_Sprite: {fileID: -2872640823634086922, guid: ee95cf1966bf1044c80895487d75f88e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -739,8 +736,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 4953143296017629538, guid: 7b854ac9a0565c640b7280a07cc9c899,
-    type: 3}
+  m_Sprite: {fileID: 4953143296017629538, guid: 7b854ac9a0565c640b7280a07cc9c899, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -827,8 +823,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7508839602596136526, guid: dddfbb23eb56c344f82dfe15224c395d,
-    type: 3}
+  m_Sprite: {fileID: 8910844699470998007, guid: d995025ea7c8bfb49a5ea938ac0f065a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -915,8 +910,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 6255268768619385751, guid: eab5d8ee5d222624ea9381ac77aa3d0c,
-    type: 3}
+  m_Sprite: {fileID: 6255268768619385751, guid: eab5d8ee5d222624ea9381ac77aa3d0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -987,15 +981,14 @@ MonoBehaviour:
   m_text: Lixo e esgoto fluem sem controle, fazendo com que o rio perca seu brilho
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1e994977596767e48a442b83c984779e, type: 2}
-  m_sharedMaterial: {fileID: 374663568645855011, guid: 1e994977596767e48a442b83c984779e,
-    type: 2}
+  m_sharedMaterial: {fileID: 374663568645855011, guid: 1e994977596767e48a442b83c984779e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278741990
-  m_fontColor: {r: 0.90196085, g: 0.41960788, b: 0.03137255, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1213,8 +1206,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7508839602596136526, guid: dddfbb23eb56c344f82dfe15224c395d,
-    type: 3}
+  m_Sprite: {fileID: 8910844699470998007, guid: d995025ea7c8bfb49a5ea938ac0f065a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1301,8 +1293,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7508839602596136526, guid: dddfbb23eb56c344f82dfe15224c395d,
-    type: 3}
+  m_Sprite: {fileID: 8910844699470998007, guid: d995025ea7c8bfb49a5ea938ac0f065a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1564,15 +1555,14 @@ MonoBehaviour:
   m_text: "O rio est\xE1 sufocando... \nSer\xE1 que algu\xE9m est\xE1 ouvindo?!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1e994977596767e48a442b83c984779e, type: 2}
-  m_sharedMaterial: {fileID: 374663568645855011, guid: 1e994977596767e48a442b83c984779e,
-    type: 2}
+  m_sharedMaterial: {fileID: 374663568645855011, guid: 1e994977596767e48a442b83c984779e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278741990
-  m_fontColor: {r: 0.90196085, g: 0.41960788, b: 0.03137255, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1823,8 +1813,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7508839602596136526, guid: dddfbb23eb56c344f82dfe15224c395d,
-    type: 3}
+  m_Sprite: {fileID: 8910844699470998007, guid: d995025ea7c8bfb49a5ea938ac0f065a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1895,15 +1884,14 @@ MonoBehaviour:
   m_text: A natureza sorri para nossa nascente, cristalina e cheia de vida.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1e994977596767e48a442b83c984779e, type: 2}
-  m_sharedMaterial: {fileID: 374663568645855011, guid: 1e994977596767e48a442b83c984779e,
-    type: 2}
+  m_sharedMaterial: {fileID: 374663568645855011, guid: 1e994977596767e48a442b83c984779e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278741990
-  m_fontColor: {r: 0.90196085, g: 0.41960788, b: 0.03137255, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2088,8 +2076,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 4328617359849093133, guid: c7601330edd938d4798b54168b8f852b,
-    type: 3}
+  m_Sprite: {fileID: 4328617359849093133, guid: c7601330edd938d4798b54168b8f852b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2242,8 +2229,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: -5560658731112747795, guid: 25fa91750da454341b423687b3823ad9,
-    type: 3}
+  m_Sprite: {fileID: -5560658731112747795, guid: 25fa91750da454341b423687b3823ad9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
