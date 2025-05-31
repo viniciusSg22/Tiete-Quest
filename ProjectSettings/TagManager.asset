@@ -11,6 +11,7 @@ TagManager:
   - OnScreenControls
   - SpawnPoint
   - ExitPortal
+  - FallDetector
   layers:
   - Default
   - TransparentFX

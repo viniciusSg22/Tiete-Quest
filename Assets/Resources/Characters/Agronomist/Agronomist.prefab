@@ -114,7 +114,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 4
+  m_GravityScale: 5
   m_Material: {fileID: 6200000, guid: 2c90e88690c1f1441a9a3c4848a0896b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -184,8 +184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 647107dad9680204586eb1ca1894551c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 20
+  moveSpeed: 6
+  jumpForce: 25
   groundCheck: {fileID: 1203013322996059428}
   groundCheckRadius: 0.2
   groundLayer:
@@ -496,7 +496,7 @@ Transform:
   m_GameObject: {fileID: 3550011770667327019}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.21, z: 0}
+  m_LocalPosition: {x: -0.3, y: -2.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

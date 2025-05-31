@@ -1,6 +1,7 @@
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviourPunCallbacks
 {
@@ -8,8 +9,17 @@ public class ScoreManager : MonoBehaviourPunCallbacks
 
     public int currentScore = 0;
 
+    public int totalEnemiesKilled = 0;
     public int damageToEnemyPoints = 75;
     public int damageReceivedPenalty = 55;
+
+    public float startTime;
+    public float elapsedTime;
+
+    void Start()
+    {
+        if (PhotonNetwork.IsMasterClient) photonView.RPC("RPC_SetStartTime", RpcTarget.AllBuffered, Time.time);
+    }
 
     void Awake()
     {
@@ -25,6 +35,13 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         }
     }
 
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "EndGame") return;
+
+        elapsedTime = Time.time - startTime;
+    }
+
     public void AddScoreFromEnemyDamage(int damage)
     {
         int points = damage * damageToEnemyPoints;
@@ -37,9 +54,26 @@ public class ScoreManager : MonoBehaviourPunCallbacks
         photonView.RPC("RPC_AddScore", RpcTarget.AllBuffered, -penalty);
     }
 
+    public void RegisterEnemyKill()
+    {
+        photonView.RPC("RPC_RegisterEnemyKill", RpcTarget.AllBuffered);
+    }
+
     [PunRPC]
     void RPC_AddScore(int value)
     {
         currentScore = Mathf.Max(0, currentScore + value);
+    }
+
+    [PunRPC]
+    void RPC_RegisterEnemyKill()
+    {
+        totalEnemiesKilled++;
+    }
+
+    [PunRPC]
+    void RPC_SetStartTime(float masterStartTime)
+    {
+        startTime = masterStartTime;
     }
 }

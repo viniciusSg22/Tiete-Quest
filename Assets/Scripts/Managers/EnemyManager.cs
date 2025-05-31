@@ -24,8 +24,8 @@ public class EnemyManager : MonoBehaviour
     {
         totalEnemiesAlive--;
 
-        if (EnemyUI.Instance != null) EnemyUI.Instance.IncrementKill();
+        if (ScoreManager.Instance != null) ScoreManager.Instance.RegisterEnemyKill();
 
-        if (totalEnemiesAlive <= 0 || EnemyUI.Instance.currentKills >= Math.Round(maxEnemies / 4.0)) exitPortal.SetActive(true);
+        if (totalEnemiesAlive <= 0 || ScoreManager.Instance.totalEnemiesKilled >= maxEnemies / 4) exitPortal.SetActive(true);
     }
 }

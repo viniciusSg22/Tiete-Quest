@@ -8,13 +8,14 @@ public class ExitPortal : MonoBehaviourPunCallbacks, IInteractable
 
     public void Interact()
     {
-        if (PhotonNetwork.IsMasterClient) PhotonNetwork.LoadLevel(sceneToLoad);
-        else photonView.RPC("RequestSceneChange", RpcTarget.MasterClient);
+        photonView.RPC(nameof(RequestSceneChange), RpcTarget.MasterClient, sceneToLoad);
     }
 
     [PunRPC]
-    void RequestSceneChange()
+    void RequestSceneChange(string requestedScene)
     {
-        if (PhotonNetwork.IsMasterClient) PhotonNetwork.LoadLevel(sceneToLoad);
+        if (!PhotonNetwork.IsMasterClient) return;
+
+        PhotonNetwork.LoadLevel(requestedScene);
     }
 }

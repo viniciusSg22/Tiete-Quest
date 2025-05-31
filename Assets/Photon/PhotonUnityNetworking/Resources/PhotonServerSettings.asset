@@ -51,6 +51,9 @@ MonoBehaviour:
   - PlayerReadyRPC
   - RequestSceneChange
   - RPC_AddScore
+  - RPC_RegisterEnemyKill
+  - RPC_SetStartTime
+  - RPC_IncrementKill
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

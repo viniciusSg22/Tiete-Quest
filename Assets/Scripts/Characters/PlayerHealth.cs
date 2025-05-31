@@ -35,7 +35,6 @@ public class PlayerHealth : MonoBehaviourPunCallbacks
         {
             ScoreManager.Instance.SubtractScoreFromPlayerDamage();
 
-
             transform.position = spawnPoint.position;
             StartCoroutine(InvulnerabilityRoutine());
         }
@@ -64,6 +63,6 @@ public class PlayerHealth : MonoBehaviourPunCallbacks
     {
         if (!photonView.IsMine) return;
 
-        if (other.CompareTag("EnemyBody")) TakeDamage();
+        if (other.CompareTag("EnemyBody") || other.CompareTag("FallDetector")) TakeDamage();
     }
 }

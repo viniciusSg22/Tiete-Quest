@@ -153,4 +153,13 @@ public class Enemy : MonoBehaviourPun
             yield return new WaitForSeconds(0.5f);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("FallDetector"))
+        {
+            EnemyManager.Instance.UnregisterEnemy();
+            PhotonNetwork.Destroy(gameObject);
+        }
+    }
 }
