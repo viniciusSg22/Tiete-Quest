@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     private void Start()
     {
         SpawnPlayerCharacter();
+        AudioManager.Instance.PlayMusic(AudioManager.ESoundType.Forest);
     }
 
     private void SpawnPlayerCharacter()
@@ -28,6 +29,9 @@ public class GameManager : MonoBehaviourPunCallbacks
                 break;
             case "Engenheiro":
                 characterName = "Engineer";
+                break;
+            default:
+                characterName = "Biologist";
                 break;
         }
 

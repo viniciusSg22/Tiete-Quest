@@ -58,8 +58,8 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        string charName = PlayerPrefs.GetString("CharacterName", "Unknown");
-        string charImage = PlayerPrefs.GetString("CharacterImage", "DefaultSprite");
+        string charName = PlayerPrefs.GetString("CharacterName", "Bióloga");
+        string charImage = PlayerPrefs.GetString("CharacterImage", "Biologist");
 
         Hashtable props = new()
         {
@@ -99,15 +99,12 @@ public class LobbyManager : MonoBehaviourPunCallbacks
             {
                 Player player = players[i];
 
-                string characterName = player.CustomProperties.ContainsKey("CharacterName") ? (string)player.CustomProperties["CharacterName"] : "Unknown";
-                string imageName = player.CustomProperties.ContainsKey("CharacterImage") ? (string)player.CustomProperties["CharacterImage"] : "DefaultSprite";
+                string characterName = player.CustomProperties.ContainsKey("CharacterName") ? (string)player.CustomProperties["CharacterName"] : "Bióloga";
+                string imageName = player.CustomProperties.ContainsKey("CharacterImage") ? (string)player.CustomProperties["CharacterImage"] : "Biologist";
                 bool isReady = player.CustomProperties.ContainsKey("IsReady") && (bool)player.CustomProperties["IsReady"];
 
                 var nameText = slot.transform.Find("SelectedCharacterName")?.GetComponent<TextMeshProUGUI>();
-                if (nameText != null)
-                    nameText.text = characterName;
-                else
-                    Debug.LogError($"[LobbyUI] 'SelectedCharacterName' não encontrado ou sem TextMeshProUGUI em {slot.name}");
+                if (nameText != null) nameText.text = characterName;
 
                 Image charImage = slot.transform.Find("SelectedCharacterImage").GetComponent<Image>();
                 Sprite loadedSprite = Resources.Load<Sprite>("Art/Characters/" + imageName);

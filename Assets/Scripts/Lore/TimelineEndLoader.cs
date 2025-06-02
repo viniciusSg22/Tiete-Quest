@@ -13,10 +13,7 @@ public class TimelineEndLoader : MonoBehaviour
 
     void OnPlayableDirectorStopped(PlayableDirector pd)
     {
-        if (pd == director)
-        {
-            SceneManager.LoadScene("Level1");
-        }
+        if (pd == director) SceneManager.LoadScene("Level1");
     }
 
     void OnDestroy()

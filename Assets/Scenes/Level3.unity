@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitPortal: {fileID: 1021378458}
-  maxEnemies: 40
+  maxEnemies: 27
 --- !u!4 &136987231
 Transform:
   m_ObjectHideFlags: 0
@@ -521,7 +521,7 @@ MonoBehaviour:
   - {fileID: 1962732076}
   - {fileID: 463129626}
   spawnDelay: 2
-  maxEnemies: 40
+  maxEnemies: 27
 --- !u!4 &552134043
 Transform:
   m_ObjectHideFlags: 0
@@ -41742,7 +41742,7 @@ PrefabInstance:
       objectReference: {fileID: 1778124027}
     - target: {fileID: 3790973357288080616, guid: e207edc2b02b8ad469fe11c8a761aab7, type: 3}
       propertyPath: m_text
-      value: / 10
+      value: / 9
       objectReference: {fileID: 0}
     - target: {fileID: 4339053770940584780, guid: e207edc2b02b8ad469fe11c8a761aab7, type: 3}
       propertyPath: maxEnemies

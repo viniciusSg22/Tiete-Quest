@@ -16,6 +16,8 @@ public class ExitPortal : MonoBehaviourPunCallbacks, IInteractable
     {
         if (!PhotonNetwork.IsMasterClient) return;
 
+        if (AudioManager.Instance != null) AudioManager.Instance.StopMusic();
+
         PhotonNetwork.LoadLevel(requestedScene);
     }
 }

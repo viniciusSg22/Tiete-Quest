@@ -39,6 +39,8 @@ public class PauseUI : MonoBehaviourPunCallbacks
             yield return null;
         }
 
+        if (AudioManager.Instance != null) AudioManager.Instance.StopMusic();
+
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }
 }

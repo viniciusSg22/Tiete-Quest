@@ -15,6 +15,11 @@ public class EnemyManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
+    void Start()
+    {
+        if (ScoreManager.Instance.totalEnemiesKilled >= maxEnemies / 3) exitPortal.SetActive(true);
+    }
+
     public void RegisterEnemy()
     {
         totalEnemiesAlive++;
@@ -26,6 +31,6 @@ public class EnemyManager : MonoBehaviour
 
         if (ScoreManager.Instance != null) ScoreManager.Instance.RegisterEnemyKill();
 
-        if (totalEnemiesAlive <= 0 || ScoreManager.Instance.totalEnemiesKilled >= maxEnemies / 4) exitPortal.SetActive(true);
+        if (totalEnemiesAlive <= 0 || ScoreManager.Instance.totalEnemiesKilled >= maxEnemies / 3) exitPortal.SetActive(true);
     }
 }

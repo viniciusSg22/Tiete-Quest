@@ -286,6 +286,8 @@ GameObject:
   - component: {fileID: 184211234}
   - component: {fileID: 184211233}
   - component: {fileID: 184211232}
+  - component: {fileID: 184211236}
+  - component: {fileID: 184211237}
   m_Layer: 5
   m_Name: SecondScreen
   m_TagString: Untagged
@@ -376,6 +378,40 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!225 &184211236
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184211231}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!95 &184211237
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184211231}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &215918445
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,8 +469,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing
-    elit quisque faucibus ex sapien vitae.
+  m_text: "No primeiro encontro com o campo, vemos sinais de mudan\xE7a. \nO som
+    dos p\xE1ssaros ainda ecoa... Mas algo est\xE1 diferente"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1e994977596767e48a442b83c984779e, type: 2}
   m_sharedMaterial: {fileID: 374663568645855011, guid: 1e994977596767e48a442b83c984779e, type: 2}
@@ -570,8 +606,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing
-    elit quisque faucibus ex sapien vitae.
+  m_text: "Aqui nasce o Tiet\xEA, cristalino e cheio de vida, peixes nadam livres
+    e a natureza sorri. Tudo come\xE7a puro e em paz"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1e994977596767e48a442b83c984779e, type: 2}
   m_sharedMaterial: {fileID: 374663568645855011, guid: 1e994977596767e48a442b83c984779e, type: 2}
@@ -662,6 +698,8 @@ GameObject:
   - component: {fileID: 306529984}
   - component: {fileID: 306529983}
   - component: {fileID: 306529982}
+  - component: {fileID: 306529986}
+  - component: {fileID: 306529987}
   m_Layer: 5
   m_Name: ForthScreen
   m_TagString: Untagged
@@ -752,6 +790,40 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!225 &306529986
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306529981}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!95 &306529987
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306529981}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &309650249
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,7 +948,17 @@ PlayableDirector:
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
-  m_SceneBindings: []
+  m_SceneBindings:
+  - key: {fileID: 3336956508112285938, guid: 4f45556f41c085245bb4b2920451ff9d, type: 2}
+    value: {fileID: 1404647274}
+  - key: {fileID: 6766891117879333321, guid: 4f45556f41c085245bb4b2920451ff9d, type: 2}
+    value: {fileID: 184211237}
+  - key: {fileID: 586034694865010493, guid: 4f45556f41c085245bb4b2920451ff9d, type: 2}
+    value: {fileID: 1367518027}
+  - key: {fileID: 3690979031882538825, guid: 4f45556f41c085245bb4b2920451ff9d, type: 2}
+    value: {fileID: 306529987}
+  - key: {fileID: -8751578088201257329, guid: 4f45556f41c085245bb4b2920451ff9d, type: 2}
+    value: {fileID: 994426923}
   m_ExposedReferences:
     m_References:
     - 730b9f9f4edddb143989cfaeac86d7cc: {fileID: 1367518021}
@@ -1231,7 +1313,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1299,13 +1381,15 @@ GameObject:
   - component: {fileID: 994426920}
   - component: {fileID: 994426919}
   - component: {fileID: 994426918}
+  - component: {fileID: 994426922}
+  - component: {fileID: 994426923}
   m_Layer: 5
   m_Name: FifthScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &994426918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1389,6 +1473,40 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!225 &994426922
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994426917}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!95 &994426923
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994426917}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1235934130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,6 +1671,8 @@ GameObject:
   - component: {fileID: 1367518024}
   - component: {fileID: 1367518023}
   - component: {fileID: 1367518022}
+  - component: {fileID: 1367518026}
+  - component: {fileID: 1367518027}
   m_Layer: 5
   m_Name: ThirdScreen
   m_TagString: Untagged
@@ -1643,6 +1763,40 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!225 &1367518026
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367518021}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!95 &1367518027
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367518021}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1404647268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1655,6 +1809,8 @@ GameObject:
   - component: {fileID: 1404647271}
   - component: {fileID: 1404647270}
   - component: {fileID: 1404647269}
+  - component: {fileID: 1404647273}
+  - component: {fileID: 1404647274}
   m_Layer: 5
   m_Name: FirstScreen
   m_TagString: Untagged
@@ -1745,6 +1901,40 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!225 &1404647273
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404647268}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!95 &1404647274
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404647268}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 14c14efa683fab94d8cb14732029af29, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1413538436
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,8 +2144,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing
-    elit quisque faucibus ex sapien vitae.
+  m_text: "O que tem\xEDamos aconteceu...\nLixo e esgoto fluem sem controle, onde
+    est\xE1 o brilho do rio?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1e994977596767e48a442b83c984779e, type: 2}
   m_sharedMaterial: {fileID: 374663568645855011, guid: 1e994977596767e48a442b83c984779e, type: 2}
@@ -2166,8 +2356,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing
-    elit quisque faucibus ex sapien vitae.
+  m_text: "O Tiet\xEA est\xE1 sufocando!\nSer\xE1 que ningu\xE9m se importa... ou
+    ainda existe esperan\xE7a?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1e994977596767e48a442b83c984779e, type: 2}
   m_sharedMaterial: {fileID: 374663568645855011, guid: 1e994977596767e48a442b83c984779e, type: 2}
