@@ -10,7 +10,7 @@ public class CameraFollow : MonoBehaviour
     {
         if (target == null) return;
 
-        Vector3 desiredPosition = new Vector3(
+        Vector3 desiredPosition = new(
             target.position.x + offset.x,
             target.position.y + offset.y,
             transform.position.z

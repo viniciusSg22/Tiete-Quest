@@ -4,13 +4,11 @@ using Photon.Pun;
 
 public class Enemy : MonoBehaviourPun
 {
-    [Header("Movimento")]
     public float moveSpeed = 2f;
     public float chaseSpeed = 3f;
     public float attackRange = 1.5f;
     public float jumpForce = 5f;
 
-    [Header("Detecção")]
     public float detectionRadius = 8f;
     public LayerMask groundLayer;
     public Transform groundCheck;
@@ -19,10 +17,8 @@ public class Enemy : MonoBehaviourPun
     public float wallCheckDistance = 0.5f;
     public Transform groundAheadCheck;
 
-    [Header("Estado")]
     public bool patrolEnabled = true;
 
-    [Header("Vida")]
     public int maxHealth = 3;
     private int currentHealth;
 

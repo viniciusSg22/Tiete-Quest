@@ -1,12 +1,9 @@
 using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 using Photon.Pun;
 
 public class PlayerAttack : MonoBehaviourPun
 {
-    [Header("Ranged")]
-    public GameObject projectilePrefab;
     public Transform firePoint;
     public float projectileSpeed = 10f;
     public float rangedCooldown = 0.5f;

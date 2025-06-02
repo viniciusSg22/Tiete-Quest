@@ -54,13 +54,7 @@ public class Bullet : MonoBehaviourPun
 
     void DestroyBullet()
     {
-        if (photonView.IsMine)
-        {
-            PhotonNetwork.Destroy(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        if (photonView.IsMine) PhotonNetwork.Destroy(gameObject);
+        else Destroy(gameObject);
     }
 }

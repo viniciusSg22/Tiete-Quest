@@ -41708,7 +41708,10 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 3f83179b3f905cb41a4ad862edd61551, type: 3}
     Volume: 1
     Source: {fileID: 0}
-  SelectedSound: 1
+  - Type: 2
+    Clip: {fileID: 8300000, guid: 04ddca9ba9be6784aa5aef6ee61ac072, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
 --- !u!4 &1771185833
 Transform:
   m_ObjectHideFlags: 0

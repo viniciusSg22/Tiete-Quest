@@ -1,16 +1,13 @@
 using Photon.Pun;
-using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviourPun
 {
-    [Header("Moviment")]
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     private Vector2 moveInput;
 
-    [Header("GroundCheck")]
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;

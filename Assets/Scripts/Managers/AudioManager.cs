@@ -27,19 +27,19 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance;
     public Sound[] Sounds;
 
-    private Dictionary<ESoundType, Sound> _soundDictionary = new();
-    private AudioSource _musicSource;
+    private readonly Dictionary<ESoundType, Sound> soundDictionary = new();
+    private AudioSource musicSource;
 
     private void Awake()
     {
         Instance = this;
 
-        foreach (var sound in Sounds) _soundDictionary[sound.Type] = sound;
+        foreach (var sound in Sounds) soundDictionary[sound.Type] = sound;
     }
 
     public void PlaySound(ESoundType type)
     {
-        if (!_soundDictionary.TryGetValue(type, out Sound sound)) return;
+        if (!soundDictionary.TryGetValue(type, out Sound sound)) return;
 
         var soundObject = new GameObject($"Sound_{type}");
         var audioSource = soundObject.AddComponent<AudioSource>();
@@ -56,39 +56,39 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMusic(ESoundType type)
     {
-        if (!_soundDictionary.TryGetValue(type, out Sound sound)) return;
+        if (!soundDictionary.TryGetValue(type, out Sound sound)) return;
 
-        if (_musicSource != null) Destroy(_musicSource.gameObject);
+        if (musicSource != null) Destroy(musicSource.gameObject);
 
         var musicObject = new GameObject($"Music_{type}");
         DontDestroyOnLoad(musicObject);
-        _musicSource = musicObject.AddComponent<AudioSource>();
+        musicSource = musicObject.AddComponent<AudioSource>();
 
         float globalMusicVolume = PlayerPrefs.GetFloat("musicVolume", 50f) / 100f;
 
-        _musicSource.clip = sound.Clip;
-        _musicSource.volume = sound.Volume * globalMusicVolume;
-        _musicSource.loop = true;
+        musicSource.clip = sound.Clip;
+        musicSource.volume = sound.Volume * globalMusicVolume;
+        musicSource.loop = true;
 
-        _musicSource.Play();
+        musicSource.Play();
     }
 
     public void StopMusic()
     {
-        if (_musicSource != null)
+        if (musicSource != null)
         {
-            _musicSource.Stop();
-            Destroy(_musicSource.gameObject);
-            _musicSource = null;
+            musicSource.Stop();
+            Destroy(musicSource.gameObject);
+            musicSource = null;
         }
     }
 
     public void UpdateMusicVolume()
     {
-        if (_musicSource != null)
+        if (musicSource != null)
         {
             float globalMusicVolume = PlayerPrefs.GetFloat("musicVolume", 50f) / 100f;
-            _musicSource.volume = globalMusicVolume;
+            musicSource.volume = globalMusicVolume;
         }
     }
 }

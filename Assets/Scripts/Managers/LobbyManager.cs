@@ -7,18 +7,14 @@ using TMPro;
 
 public class LobbyManager : MonoBehaviourPunCallbacks
 {
-    [Header("Player Slots")]
     public Transform[] playerSlots;
 
-    [Header("Ready Sprites")]
     public Sprite readySprite;
     public Sprite notReadySprite;
 
-    [Header("Botões")]
     public Button readyButton;
     public Button cancelButton;
 
-    [Header("Inputs")]
     public GameObject createInput;
     public GameObject joinInput;
     public TMP_Text readyButtonText;
@@ -34,26 +30,14 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     public void CreateRoom()
     {
-        if (PhotonNetwork.InRoom)
-        {
-            PhotonNetwork.LeaveRoom();
-        }
-        else
-        {
-            PhotonNetwork.CreateRoom(createInput.GetComponent<TMP_InputField>().text);
-        }
+        if (PhotonNetwork.InRoom) PhotonNetwork.LeaveRoom();
+        else PhotonNetwork.CreateRoom(createInput.GetComponent<TMP_InputField>().text);
     }
 
     public void JoinRoom()
     {
-        if (PhotonNetwork.InRoom)
-        {
-            PhotonNetwork.LeaveRoom();
-        }
-        else
-        {
-            PhotonNetwork.JoinRoom(joinInput.GetComponent<TMP_InputField>().text);
-        }
+        if (PhotonNetwork.InRoom) PhotonNetwork.LeaveRoom();
+        else PhotonNetwork.JoinRoom(joinInput.GetComponent<TMP_InputField>().text);
     }
 
     public override void OnJoinedRoom()
@@ -167,11 +151,9 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     {
         foreach (var player in PhotonNetwork.PlayerList)
         {
-            if (!player.CustomProperties.ContainsKey("IsReady") || !(bool)player.CustomProperties["IsReady"])
-            {
-                return false;
-            }
+            if (!player.CustomProperties.ContainsKey("IsReady") || !(bool)player.CustomProperties["IsReady"]) return false;
         }
+
         return true;
     }
 }

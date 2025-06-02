@@ -7,8 +7,15 @@ public class PauseUI : MonoBehaviourPunCallbacks
 {
     public GameObject PausePanel;
 
-    public void Pause() => PausePanel.SetActive(true);
-    public void Continue() => PausePanel.SetActive(false);
+    public void Pause()
+    {
+        PausePanel.SetActive(true);
+    }
+
+    public void Continue()
+    {
+        PausePanel.SetActive(false);
+    }
 
     public void Exit()
     {
